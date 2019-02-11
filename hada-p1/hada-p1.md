@@ -6,4 +6,3 @@ P2. ¿Qué cambios se han producido al ejecutar el comando reset?
 
 P3. ¿Qué diferencias observas entre revert y reset?
 	Con revert podemos volver a un commit anterior especificado con HEAD o HEAD~n. Con reset volvemos al estado inicial del último commit.
-
