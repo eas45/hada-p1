@@ -12,7 +12,10 @@ namespace hada_p1
         {
             double min = 0;
 
-            min = s / 60;
+            if (s != 0)
+            {
+                min = s / 60;
+            }
 
             return min;
         }
