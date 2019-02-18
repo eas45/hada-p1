@@ -20,7 +20,8 @@ namespace hada_p1
                 Console.WriteLine("--- MENÚ DE CONVERSIÓN ---");
                 Console.WriteLine(" 1 - Segundos -> Minutos");
                 Console.WriteLine(" 2 - Minutos -> Segundos");
-                Console.WriteLine(" 3 - Salir");
+                Console.WriteLine(" 3 - Horas -> Minutos");
+                Console.WriteLine(" 4 - Salir");
                 Console.WriteLine("Inserta el número de la opción: ");
                 opt = Console.ReadLine();
 
@@ -29,21 +30,26 @@ namespace hada_p1
                     case "1":
                         Console.WriteLine("\nInserta los segundos que quieres convertir en minutos: ");
                         data = Console.ReadLine();
-                        Console.WriteLine("\n{0}", HadaP1.Seconds2Minutes(Double.Parse(data)));
+                        Console.WriteLine("\nSegundos: {0} || Minutos: {1}", data, HadaP1.Seconds2Minutes(Double.Parse(data)));
                         break;
                     case "2":
                         Console.WriteLine("\nInserta los minutos que quieres convertir en segundos: ");
                         data = Console.ReadLine();
-                        Console.WriteLine("\n{0}", HadaP1.Minutes2Seconds(Double.Parse(data)));
+                        Console.WriteLine("\nMinutos: {0} || Segundos: {1}", data, HadaP1.Minutes2Seconds(Double.Parse(data)));
                         break;
                     case "3":
+                        Console.WriteLine("\nInserta las horas que quieres convertir en horas: ");
+                        data = Console.ReadLine();
+                        Console.WriteLine("\nHoras: {0} || Minutos: {1}", data, HadaP1.Hours2Minutes(Double.Parse(data)));
+                        break;
+                    case "4":
                         Console.WriteLine("Hasta luego");
                         break;
                     default:
                         Console.WriteLine("ERROR! - Opción desconocida\n");
                         break;
                 }
-            } while (opt != "3");
+            } while (opt != "4");
         }
     }
 }
